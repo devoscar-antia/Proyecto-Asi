@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-md-2 d-md-block sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <br>
+          <button type="submit" class="btn btn-outline-primary btn-lg" (click)="authService.SignOut()">Salir</button>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+    <div class="row">
+      <div class="col-md-16 mx-auto mt-5">
+        <div class="card">
+          <div class="card-body">
+            <h2>Perfil de Usuario</h2>
+            <div *ngIf="authService.userData as user">
+              <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
+              <div class="media-body">
+                <h1>Bienvenido: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                <p>ID de Usuario: <strong>{{user.uid}}</strong></p>
+                <p>Correo Electronico: <strong>{{user.email}}</strong></p>
+                <p>Correo Verificado: <strong>{{user.emailVerified}}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

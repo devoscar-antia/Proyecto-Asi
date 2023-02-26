@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viweport"content="width=device-width, initial-scale=1.0"> 
+        <title>Inicio</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="msg-container">
+                <div id="slider" [style.transform]="transform">
+                    <div class="msg-col">
+                        <h1>Nuestro Objetivo</h1>
+                        <p class="text-justify">Nuestro principal objetivo es ayudar a todas aquellas personas que se desee  tener una buena salud y estar en forma físicamente mediante el uso de nuestra aplicación, obtendrás recomendaciones que te ayudaran a cambiar tu estilo de vida.</p>
+                        <a href="">Ver Más</a>
+                    </div>
+
+                    <div class="msg-col">
+                        <h1>Dietas</h1>
+                        <p class="text-justify">En esta sección te ayudaremos a formar una alimentación adecuada que sera controlada para ayudarte en tu formación por una vida mejor.</p>
+                        <a href="">Ver Más</a>
+                    </div>
+
+                    <div class="msg-col">
+                        <h1>Rutinas</h1>
+                        <p class="tex-justify">En esta sección te ayudaremos a formar una alimentación adecuada que será controlada para ayudarte en tu formación teniendo en cuenta el tipo de alimentación que elijas de esta forma tendrás amplias opciones a la hora de elegir tu tipo de alimento el cual ayudará día a día para tener una vida mejor.</p>
+                        <a href="">Ver Más</a>
+                    </div>
+
+                    <div class="msg-col">
+                        <h1>Avances</h1>
+                        <p class="tex-justify">En esta sección te mostraremos la evolución que has tenido a lo largo del uso de nuestra aplicación mostrando un ponderado de datos acorde a los datos suministrados y   escogidos para  tu proceso de formación a la hora de una vida saludable.</p>
+                        <a href="">Ver Más</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="controller">
+                <div id="line1" (click)="slidewhite()"></div>
+                <div id="line2" (click)="slidewhite1()"></div>
+                <div id="line3" (click)="slidewhite2()"></div>
+                <div id="line4" (click)="slidewhite3()"></div>
+                <div id="active"[style.top]="active"></div>
+            </div>
+        </div>
+    </body>
+</html>

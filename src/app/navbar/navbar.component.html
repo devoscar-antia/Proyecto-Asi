@@ -1,0 +1,96 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codeply">
+  <base target="_self"> 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>button:focus {
+    outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+}</style>
+
+</head>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: rgb(98, 53, 141,0.9);">
+        <a class="navbar-brand topnav" href="inicio">Fitlife</a>
+        <button class="navbar-toggler border-0 collapsed" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-expanded="false">
+            ☰
+        </button>
+        
+        <div class="navbar-collapse collapse" id="navbarColor03" >
+            <ul class="nav navbar-nav">
+             <li class="nav-item"><a href="inicio" class="nav-link">Inicio</a></li>
+              <li *ngIf="authService.isLoggedIn"  class="nav-item"><a href="dietas" class="nav-link">Dietas y Alimentación</a></li>
+              <li *ngIf="authService.isLoggedIn" class="nav-item"><a href="rutinas" class="nav-link">Rutinas</a></li>
+              <li *ngIf="authService.isLoggedIn" class="nav-item"><a href="progreso" class="nav-link">Progreso</a></li>
+            </ul>
+            <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                <li class="nav-item order-2 order-md-1"><a href="dashboard" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                <li class="dropdown order-1">
+                    <div class="btn-group">
+                    <button type="button" [routerLink]="['/sign-in']" class="btn btn-primary" >Iniciar sesion</button>
+                    <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false"><span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right mt-2">
+                       <li class="px-3 py-2">
+                           <form class="form" role="form">
+                            <div class="formgroup">
+                                <label for="text">Email:</label>
+                                <input type="email" class="formControl" formControlName="email" placeholder="ejemplo@example.com"
+                                  #userEmail required />
+                              </div>
+                              <p></p>
+                              <div class="formgroup">
+                                <label for="password">Contraseña:</label>
+                                <input type="password" class="formControl" formControlName="password" placeholder="contraseña"
+                                  #userPassword required />
+                              </div>
+                              <div class="formGroup"> 
+                                  <p></p>
+                                  <div class="text-center">
+                                    <button type="submit" class="btn btn-outline-primary"
+                                    (click)="authService.SignIn(userEmail.value, userPassword.value)">Iniciar</button>
+                                  </div>
+                              
+                                </div>
+                                <div class="form-group text-center">
+                                    <small><a [routerLink]="['/forgot-password']" >Olvidaste tu contraseña?</a></small>
+                                </div>
+                                <div class="form-gruop">
+                                    <p>¿No tienes una cuenta?&ensp;<a [routerLink]="['/register-user']">registrarse</a></p>
+                                  </div>
+                                
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Forgot password</h3>
+                <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <p>Reset your password..</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
+

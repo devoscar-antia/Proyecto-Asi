@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="displayTable">
+          <div class="displayTableCell">
+            <div class="authBlock">
+              <h1 class="text-center">Registrarse</h1>
+              <p></p>
+              <form>
+                <div class="formgroup">
+                  <label for="text">Email:</label>
+                  <input type="email" class="formControl" formControlName="email" placeholder="ejemplo@example.com" size="25"
+                    #userEmail required>
+                </div>
+                <div class="formgroup">
+                  <label for="password">Contraseña:</label>
+                  <input type="password" class="formControl" formControlName="password" placeholder="contraseña"
+                    id="userPassword"minlength='6' #userPassword required>
+                </div>
+                <div class="formgroup">
+                  <label for="password">Contraseña:</label>
+                  <input type="password" class="formControl " formControlName="password" placeholder="contraseña"oninvalid="setCustomValidity('Campo obligatorio, debe coincidir con la contraseña')"
+                  id="userPassword2" minlength='6' #userPassword2 required>
+                </div>
+                <div class="formgroup">
+                <button type="submit" class="btn btn-outline-primary link" href="verify-email-address" (click)="authService.SignUp(userEmail.value, userPassword.value)">Registrarse</button><a>&nbsp;O&nbsp;</a>
+                <button type="submit" class="btn googleBtn  btn-danger"
+                  (click)="authService.GoogleAuth()"><a>
+                    <i class="fa fa-google"></i>
+                    </a>
+                    </button>
+                <a>&nbsp;O&nbsp;</a>
+                <button type="submit" class="btn facebookBtn  btn-primary"
+                  (click)="authService.FacebookAuth()">
+                    <div>
+                      <i class="fa fa-facebook"></i>
+                    </div>
+                </button>
+              </div>
+              </form>
+              <div class="form-gruop mt-3">
+              <p>¿Ya tienes una cuenta?&ensp;<a [routerLink]="['/sign-in']">Iniciar sesion</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
