@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+#imagenes del proyecto 
+
+[![Fitlife.png](https://i.postimg.cc/kMQzWrTm/Fitlife.png)](https://postimg.cc/vDm0dKRq)
+
+[![Fitlife-Desayunos.png](https://i.postimg.cc/CK4njxn8/Fitlife-Desayunos.png)](https://postimg.cc/t1Ygby5R)
+
+[![Fitlife-Rutinas.png](https://i.postimg.cc/MGzvKJ3p/Fitlife-Rutinas.png)](https://postimg.cc/75QxmdyF)
+
+
+
